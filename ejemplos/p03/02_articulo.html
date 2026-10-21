@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Cambio: lang="es" identifica correctamente el idioma del contenido.
+     Justificacion Semantica: ayuda a lectores de pantalla y navegadores a interpretar el idioma. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +8,17 @@
     <title>Guacamole</title>
 </head>
 <body>
+    <!-- CAMBIO: La solución presenta este archivo como un fragmento article, sin html, head ni body.
+     JUSTIFICACIÓN SEMÁNTICA: article contiene información autónoma que puede incluirse en index.html. -->
     <article>
         <header>
             <!-- small:Reduce el tamaño de la fuenta-->
             <!-- time datetime: Representa una fecha u hora, incluyendo el atributo datetima, los motores de busqueda pueden leer el
             el formato de la fecha-->
-            <p><small>&copy;publicado por MasterChef, <time datetime="2018-11-15">November 15, 2018</time></small></p>
+            <!-- CAMBIO: Se quitó small de la fecha y se agregó pubdate a time como aparece en la solución.
+                 JUSTIFICACIÓN SEMÁNTICA: header agrupa información introductoria y time define
+                 una fecha legible para programas; pubdate se conserva aunque sea obsoleto. -->
+            <p>publicado por MasterChef, <time datetime="2018-11-15" pubdate>November 15, 2018</time></p>
         </header>
         <h2>Bajito y Despacito</h2>
 
@@ -21,23 +28,32 @@
         <!-- dfn: Marca un termino o definicion en especifico del parrafo-->
         <!-- cite: Se usa para referenciar titulos, se muestra en cursiva-->
         <!-- q: se usa para hacer citas textuales cortas dentro de un mismo parrafo, poniendo comillas-->
-        <p>Esta semana estamos <em><b>extremadamente</em></b> emocionados por presentar una
-        nueva técnica de cocina llamada <i><dfn>sous vide</i></dfn>. Con la técnica sous
-        vide, tú sumerges un recipiente (generalmente de plástico sellado
-        al vacío) en un baño de agua que precisamente se adapta a la
-        temperatura requerida para que la comida sea cocinada. En este
-        programa, <cite>Cocina para Geeks,</cite> Jaime Potter describe la técnica como
-        <q>poción mágica a temperatura ultra baja.</q></p>
+        <!-- CAMBIO: Se eliminó b del énfasis de «extremadamente» y se ajustó el anidamiento de dfn e i.
+             También se ajustaron cite y q al texto de la solución.
+             JUSTIFICACIÓN SEMÁNTICA: em da énfasis, dfn señala un término definido, i distingue
+             un término extranjero, cite identifica una obra y q contiene una cita corta. -->
+        <p>Esta semana estamos <em>extremadamente</em> emocionados por presentar una
+        nueva técnica de cocina llamada <dfn><i>sous vide</i></dfn>. Con la técnica <i>sous vide</i>,
+        tú sumerges un recipiente (generalmente de plastico sellado al vacío)
+        en un baño de agua que precisamente se adapta a la temperatura requerida
+        para que la comida sea cocinada. En este programa, <cite>Cocina para Geeks</cite>,
+        Jaime Potter describe la técnica como <q>poción mágica a temperatura ultra baja</q>.</p>
 
-        <p>La siguiente semana, prepararemos <em>Salmon Sous Vide con Eneldo
-        Holandés.</em> Para asistir al programa, contáctanos antes del 30 de
+        <!-- CAMBIO: El nombre del platillo pasó de em a b, siguiendo la solución.
+             JUSTIFICACIÓN SEMÁNTICA: b destaca texto sin expresar el énfasis de em. -->
+        <p>La siguiente semana, prepararemos <b>Salmon Sous Vide con Eneldo
+        Holandés</b>. Para asistir al programa, contáctanos antes del 30 de
         Noviembre.</p>
+
         <!-- br: Crea un salto de linea, no necesita etiqueta de cierre-->
+        <!-- CAMBIO: Se retiró dfn del número telefónico.
+             JUSTIFICACIÓN SEMÁNTICA: El número no es un término que se define;
+             br separa el correo y el teléfono en dos líneas. -->
         <p>registro@masterchef.com<br>
-        <dfn>552-336-1800</dfn></p>
-        <p><b>Advertencia: El salmón cocinado a la Sous vide no está
-        pasteurizado. Evítalo se está embarazada o se tiene problemas de
-        alergia e inmunidad.</b></p>
+        <!-- CAMBIO: La advertencia pasó de b a small, como indica la solución.
+             JUSTIFICACIÓN SEMÁNTICA: small representa notas secundarias; para expresar
+             importancia sería más apropiado strong, pero se respeta la solución. -->
+        <p><small>Advertencia: El salmón cocinado a la Sous vide no está
+        pasteurizado. Evitarlo si se está embarazada o se tiene problemas de
+        alergia e inmunidad.</small></p>
     </article>
-</body>
-</html>

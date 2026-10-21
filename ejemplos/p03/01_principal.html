@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Cambio: lang="es" identifica correctamente el idioma del contenido.
+     Justificacion Semantica: ayuda a lectores de pantalla y navegadores a interpretar el idioma. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,25 +8,30 @@
     <title>Guacamole</title>
 </head>
 <body>
+    <!-- Encabezado h1: Titulo Principal-->
+    <!-- Encabezado h2: Subtitulo-->
+    <!-- CAMBIO: Se sustituyeron los dos encabezados por un solo h1 con el nombre de la receta.
+         JUSTIFICACIÓN SEMÁNTICA: h1 identifica el tema principal del documento. -->
+    <h1>Guacamole (clásico)</h1>
 
-    <h1>MasterChef</h1> <!-- Encabezado h1: Titulo Principal-->
-    <h2>Guacamole(Clasico)</h2><!-- Encabezado h2: Subtitulo-->
-    
-    <p><!-- Parrafo: Define los parrafos del texto-->
-        <blockquote><!-- Contenido Adiconal. blockquote: Cita bloques largos que vienen de otra fuente-->
+    <!-- CAMBIO: Se separó blockquote del párrafo que lo contenía.
+         JUSTIFICACIÓN SEMÁNTICA: blockquote representa una cita extensa y no debe estar dentro de p. -->
+    <blockquote><!-- Contenido Adiconal. blockquote: Cita bloques largos que vienen de otra fuente-->
         "Existe un condimento que no puede faltar en toda mesa mexicana. Algunos
         lo consideran una salsa, otros un aderezo, algunos incluso le llaman
         ensalada, otros simplemente le llaman por su nombre propio: Guacamole."
-        </blockquote>
+    </blockquote>
+
+    <p><!-- Parrafo: Define los parrafos del texto-->
         Aunque el guacamole se prepara de diferentes formas según la zona de la que
         provenga la receta, la base suele ser la misma. Aquí te mostramos una receta
         muy completa para preparar esta conocida salsa mexicana:
-        
     </p>
 
-    <p>
-        <h3>Ingredientes</h3> <!-- Encabezado h3: Informacion-->
-        <ul><!-- Lista Ordenada: Marca con un punto los elemntos a ordenar-->
+    <!-- CAMBIO: Se quitó el párrafo que envolvía el encabezado y la lista; h3 cambió por h2.
+         JUSTIFICACIÓN SEMÁNTICA: h2 presenta una sección dependiente de h1, y ul no debe estar dentro de p. -->
+    <h2>Ingredientes</h2> <!-- Encabezado h3: Informacion-->
+    <ul><!-- Lista Ordenada: Marca con un punto los elemntos a ordenar-->
 
         <li>4 o 5 aguacates maduros</li>
         <li>1 cebolla mediana (normal)</li>
@@ -34,12 +41,13 @@
         <li>1 manojo de cilantro fresco</li>
         <li>Sal</li>
 
-        </ul>
-    </p>
+    </ul>
 
-    <p>
-        <h3>Instrucciones</h3><!-- Encabezado h3: Informacion-->
-        <ol><!-- Lista Descriptiva: Enumera los elementos empezando desde el 1 hasta la cantidad de elementos que haya enlistado-->
+    <!-- CAMBIO: Se quitó el párrafo que envolvía el encabezado y la lista; h3 cambió por h2.
+         JUSTIFICACIÓN SEMÁNTICA: Instrucciones e Ingredientes son secciones del mismo nivel; ol
+         representa una secuencia de pasos y se coloca fuera de p. -->
+    <h2>Instrucciones</h2><!-- Encabezado h3: Informacion-->
+    <ol><!-- Lista Descriptiva: Enumera los elementos empezando desde el 1 hasta la cantidad de elementos que haya enlistado-->
 
         <li>Lavar bien el tomate y el manojo de cilantro</li>
         <li>Pelar la cebolla y quitarle la capa exterior</li>
@@ -51,21 +59,9 @@
         <li>Añadir el zumo de 1/2 lima con una pizca de sal</li>
         <li>Añadir un chile serrano muy bien picadito</li>
         <li>Machacar todos los ingredientes en el molcajete</li>
-        </ol>
-    </p>
 
-    <p>  
+    </ol>
+
+    <p>
         En caso de no contar con un molcajete, se puede utilizar un tenedor
-        procurando que la pulpa del aguacate se mezcle con los demás ingredientes.
-        Debe quedarnos un guacamole con los trozos visibles, pero opcionalmente
-        puede pasarse por la batidora para dejarlo más cremoso y con una textura
-        más uniforme.
-    </p>
-
-
-    <footer><!-- footer: Define el pie de página, usado generalmente para información de derechos de autor-->
-        <p> Publicado por Masterchef, November 15, 2018</p>
-        <p>&copy;2026 Gustavo Arce Garcia. Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+        procurando

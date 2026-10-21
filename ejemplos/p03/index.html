@@ -7,24 +7,30 @@
 </head>
 <body>
 
-    <h1>MasterChef</h1> <!-- Encabezado h1: Titulo Principal-->
-    <h2>Guacamole(Clasico)</h2><!-- Encabezado h2: Subtitulo-->
-    
-    <p><!-- Parrafo: Define los parrafos del texto-->
-        <blockquote><!-- Contenido Adiconal. blockquote: Cita bloques largos que vienen de otra fuente-->
+    <!-- Encabezado h1: Titulo Principal-->
+    <!-- Encabezado h2: Subtitulo-->
+    <!-- CAMBIO: Se sustituyeron los dos encabezados por un solo h1 con el nombre de la receta.
+         JUSTIFICACIÓN SEMÁNTICA: h1 identifica el tema principal del documento. -->
+    <h1>Guacamole (clásico)</h1>
+
+    <!-- CAMBIO: Se separó blockquote del párrafo que lo contenía.
+         JUSTIFICACIÓN SEMÁNTICA: blockquote representa una cita extensa y no debe estar dentro de p. -->
+    <blockquote><!-- Contenido Adiconal. blockquote: Cita bloques largos que vienen de otra fuente-->
         "Existe un condimento que no puede faltar en toda mesa mexicana. Algunos
         lo consideran una salsa, otros un aderezo, algunos incluso le llaman
         ensalada, otros simplemente le llaman por su nombre propio: Guacamole."
-        </blockquote>
+    </blockquote>
+
+    <p><!-- Parrafo: Define los parrafos del texto-->
         Aunque el guacamole se prepara de diferentes formas según la zona de la que
         provenga la receta, la base suele ser la misma. Aquí te mostramos una receta
         muy completa para preparar esta conocida salsa mexicana:
-        
     </p>
 
-    <p>
-        <h3>Ingredientes</h3> <!-- Encabezado h3: Informacion-->
-        <ul><!-- Lista Ordenada: Marca con un punto los elemntos a ordenar-->
+    <!-- CAMBIO: Se quitó el párrafo que envolvía el encabezado y la lista; h3 cambió por h2.
+         JUSTIFICACIÓN SEMÁNTICA: h2 presenta una sección dependiente de h1, y ul no debe estar dentro de p. -->
+    <h2>Ingredientes</h2> <!-- Encabezado h3: Informacion-->
+    <ul><!-- Lista Ordenada: Marca con un punto los elemntos a ordenar-->
 
         <li>4 o 5 aguacates maduros</li>
         <li>1 cebolla mediana (normal)</li>
@@ -34,12 +40,13 @@
         <li>1 manojo de cilantro fresco</li>
         <li>Sal</li>
 
-        </ul>
-    </p>
+    </ul>
 
-    <p>
-        <h3>Instrucciones</h3><!-- Encabezado h3: Informacion-->
-        <ol><!-- Lista Descriptiva: Enumera los elementos empezando desde el 1 hasta la cantidad de elementos que haya enlistado-->
+    <!-- CAMBIO: Se quitó el párrafo que envolvía el encabezado y la lista; h3 cambió por h2.
+         JUSTIFICACIÓN SEMÁNTICA: Instrucciones e Ingredientes son secciones del mismo nivel; ol
+         representa una secuencia de pasos y se coloca fuera de p. -->
+    <h2>Instrucciones</h2><!-- Encabezado h3: Informacion-->
+    <ol><!-- Lista Descriptiva: Enumera los elementos empezando desde el 1 hasta la cantidad de elementos que haya enlistado-->
 
         <li>Lavar bien el tomate y el manojo de cilantro</li>
         <li>Pelar la cebolla y quitarle la capa exterior</li>
@@ -51,10 +58,10 @@
         <li>Añadir el zumo de 1/2 lima con una pizca de sal</li>
         <li>Añadir un chile serrano muy bien picadito</li>
         <li>Machacar todos los ingredientes en el molcajete</li>
-        </ol>
-    </p>
 
-    <p>  
+    </ol>
+
+    <p>
         En caso de no contar con un molcajete, se puede utilizar un tenedor
         procurando que la pulpa del aguacate se mezcle con los demás ingredientes.
         Debe quedarnos un guacamole con los trozos visibles, pero opcionalmente
@@ -63,19 +70,23 @@
     </p>
 
 
-    <footer><!-- footer: Define el pie de página, usado generalmente para información de derechos de autor-->
-        <p> Publicado por Masterchef, November 15, 2018</p>
-        <p>&copy;2026 Gustavo Arce Garcia. Todos los derechos reservados.</p>
-    </footer>
-</body>
-<body>
+    <!-- footer: Define el pie de página, usado generalmente para información de derechos de autor-->
+    <!-- CAMBIO: La solución ya no incluye el footer ni los créditos finales de este archivo.
+         JUSTIFICACIÓN SEMÁNTICA: Se conserva el contenido de la solución y tu comentario original,
+         aunque la etiqueta footer ya no aparece. -->
+
+    <!-- CAMBIO: Ahora el artículo se encuentra dentro del mismo body que la receta.
+         JUSTIFICACIÓN SEMÁNTICA: Un documento debe tener un solo body y article identifica
+         contenido autónomo dentro de ese mismo documento. -->
     <article>
         <header>
             <!-- small:Reduce el tamaño de la fuenta-->
             <!-- time datetime: Representa una fecha u hora, incluyendo el atributo datetima, los motores de busqueda pueden leer el
             el formato de la fecha-->
-
-            <p><small>&copy;publicado por MasterChef, <time datetime="2018-11-15">November 15, 2018</time></small></p>
+            <!-- CAMBIO: Se quitó small de la fecha y se agregó pubdate a time como aparece en la solución.
+                 JUSTIFICACIÓN SEMÁNTICA: header agrupa información introductoria y time define
+                 una fecha legible para programas; pubdate se conserva aunque sea obsoleto. -->
+            <p>publicado por MasterChef, <time datetime="2018-11-15" pubdate>November 15, 2018</time></p>
         </header>
         <h2>Bajito y Despacito</h2>
 
@@ -85,26 +96,36 @@
         <!-- dfn: Marca un termino o definicion en especifico del parrafo-->
         <!-- cite: Se usa para referenciar titulos, se muestra en cursiva-->
         <!-- q: se usa para hacer citas textuales cortas dentro de un mismo parrafo, poniendo comillas-->
+        <!-- CAMBIO: Se eliminó b del énfasis de «extremadamente» y se ajustó el anidamiento de dfn e i.
+             También se ajustaron cite y q al texto de la solución.
+             JUSTIFICACIÓN SEMÁNTICA: em da énfasis, dfn señala un término definido, i distingue
+             un término extranjero, cite identifica una obra y q contiene una cita corta. -->
+        <p>Esta semana estamos <em>extremadamente</em> emocionados por presentar una
+        nueva técnica de cocina llamada <dfn><i>sous vide</i></dfn>. Con la técnica <i>sous vide</i>,
+        tú sumerges un recipiente (generalmente de plastico sellado al vacío)
+        en un baño de agua que precisamente se adapta a la temperatura requerida
+        para que la comida sea cocinada. En este programa, <cite>Cocina para Geeks</cite>,
+        Jaime Potter describe la técnica como <q>poción mágica a temperatura ultra baja</q>.</p>
 
-        <p>Esta semana estamos <em><b>extremadamente</em></b> emocionados por presentar una
-        nueva técnica de cocina llamada <i><dfn>sous vide</i></dfn>. Con la técnica sous
-        vide, tú sumerges un recipiente (generalmente de plástico sellado
-        al vacío) en un baño de agua que precisamente se adapta a la
-        temperatura requerida para que la comida sea cocinada. En este
-        programa, <cite>Cocina para Geeks,</cite> Jaime Potter describe la técnica como
-        <q>poción mágica a temperatura ultra baja.</q></p>
-
-        <p>La siguien te semana, prepararemos <em>Salmon Sous Vide con Eneldo
-        Holandés.</em> Para asistir al programa, contáctanos antes del 30 de
+        <!-- CAMBIO: El nombre del platillo pasó de em a b, siguiendo la solución.
+             JUSTIFICACIÓN SEMÁNTICA: b destaca texto sin expresar el énfasis de em. -->
+        <p>La siguiente semana, prepararemos <b>Salmon Sous Vide con Eneldo
+        Holandés</b>. Para asistir al programa, contáctanos antes del 30 de
         Noviembre.</p>
 
         <!-- br: Crea un salto de linea, no necesita etiqueta de cierre-->
-
+        <!-- CAMBIO: Se retiró dfn del número telefónico.
+             JUSTIFICACIÓN SEMÁNTICA: El número no es un término que se define;
+             br separa el correo y el teléfono en dos líneas. -->
         <p>registro@masterchef.com<br>
-        <dfn>552-336-1800</dfn></p>
-        <p><b>Advertencia: El salmón cocinado a la Sous vide no está
-        pasteurizado. Evítalo se está embarazada o se tiene problemas de
-        alergia e inmunidad.</b></p>
+        552-336-1800</p>
+
+        <!-- CAMBIO: La advertencia pasó de b a small, como indica la solución.
+             JUSTIFICACIÓN SEMÁNTICA: small representa notas secundarias; para expresar
+             importancia sería más apropiado strong, pero se respeta la solución. -->
+        <p><small>Advertencia: El salmón cocinado a la Sous vide no está
+        pasteurizado. Evitarlo si se está embarazada o se tiene problemas de
+        alergia e inmunidad.</small></p>
     </article>
 </body>
 </html>
